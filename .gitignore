@@ -1,0 +1,17 @@
+#FRONTEND
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+#BACKEND
+backend/.venv/
+backend/__pycache__/
+**/__pycache__/
+**/*.py[cod]
+backend/.vscode

@@ -1,0 +1,16 @@
+/* App-level layout rules */
+@import './index.css';
+
+.app-root { min-height: 100vh; display: flex; flex-direction: column; }
+
+.app-main { flex: 1; padding: 1.5rem; }
+
+.footer { padding: 1rem; text-align: center; color: var(--muted); font-size: .9rem; }
+
+/* Make router children stack nicely */
+.page { margin: 0 auto; max-width: var(--max-width); padding: 1rem; }
+
+@media (max-width: 640px) {
+  .app-main { padding: 1rem; }
+  .page { padding: .75rem; }
+}

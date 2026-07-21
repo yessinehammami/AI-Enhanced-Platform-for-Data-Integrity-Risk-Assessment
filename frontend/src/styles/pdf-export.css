@@ -1,0 +1,60 @@
+/* Applied only during export */
+.pdf-export-mode {
+  background: #ffffff;
+}
+
+/* Ensure the exported report has a stable width */
+.pdf-export-mode .report-container {
+  width: 1400px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Prevent clipped content */
+.pdf-export-mode * {
+  overflow: visible !important;
+}
+
+/* Avoid layout changes caused by sticky elements */
+.pdf-export-mode .sticky,
+.pdf-export-mode [style*="position: sticky"] {
+  position: static !important;
+}
+
+/* Remove scroll areas that break html2canvas */
+.pdf-export-mode .scroll-container {
+  overflow: visible !important;
+  height: auto !important;
+  max-height: none !important;
+}
+
+/* Stabilize canvas rendering */
+.pdf-export-mode canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hide interactive UI elements */
+.pdf-export-mode button,
+.pdf-export-mode .no-print,
+.pdf-export-mode .export-button {
+  display: none !important;
+}
+
+/* Disable animations during capture */
+.pdf-export-mode * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Ensure images render correctly */
+.pdf-export-mode img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Optional page section spacing */
+.pdf-export-mode .report-section {
+  margin-bottom: 24px;
+  break-inside: avoid;
+}

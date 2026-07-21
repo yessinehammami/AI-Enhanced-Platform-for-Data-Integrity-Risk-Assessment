@@ -1,0 +1,17 @@
+# Node dependencies (installed in the container)
+node_modules
+
+# Build output (avoid copying local builds)
+build
+dist
+
+# Logs and temp files
+npm-debug.log
+yarn-error.log
+*.log
+
+# OS and editor files
+.DS_Store
+*.swp
+.idea
+.vscode

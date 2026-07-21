@@ -1,0 +1,702 @@
+/* General Scrollbar Styling */
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* General Container Styles */
+.global-view-container,
+.site-view-container,
+.system-view-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab Navigation */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #555;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.tab:hover {
+    background-color: #e0e0e0;
+}
+
+.tab.active:hover {
+    background-color: #0056b3;
+}
+
+/* Content Sections */
+.tab-content {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Loading and Error States */
+.loading-message,
+.error-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Site View Specific Styles */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.chart-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-card h3 {
+    text-align: center;
+    margin: 0 0 15px 0;
+    flex-shrink: 0;
+}
+
+.chart-card canvas {
+    flex: 1;
+    max-height: 280px;
+}
+
+/* Tables */
+.tables-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.table-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-card h3 {
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* System View Specific Styles */
+.system-view-container .dropdown-container {
+    margin-bottom: 20px;
+}
+
+.system-details-container {
+    margin-top: 20px;
+}
+
+.info-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.info-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-card h4 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.info-card p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.gaps-table-container {
+    margin-top: 20px;
+}
+
+/* SiteView Specific Styles */
+.site-view-wrapper {
+    padding: 20px;
+}
+
+.top-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.systems-used-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.systems-used-card h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.systems-used-card p {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: #2c3e50;
+    line-height: 1;
+}
+
+.category-chart-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    background-color: #f9f9f9;
+    text-align: center;
+    min-height: 250px;
+}
+
+.category-chart-card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.category-chart-card canvas {
+    max-height: 200px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.conformity-objective-card {
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ecf0f1 0%, #f9f9f9 100%);
+    min-width: 200px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.conformity-objective-card h3 {
+    margin: 0 0 15px 0;
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.conformity-objective-card .conformity-value {
+    margin: 0 0 12px 0;
+    font-size: 42px;
+    font-weight: bold;
+    color: #3498db;
+    line-height: 1;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 28px;
+    background-color: #ecf0f1;
+    border-radius: 14px;
+    overflow: hidden;
+    margin: 12px 0;
+    border: 1px solid #bdc3c7;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db 0%, #2980b9 100%);
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.conformity-objective-card .target-label {
+    margin: 0;
+    font-size: 11px;
+    color: #7f8c8d;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Donut Charts Row */
+.donut-charts-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.donut-chart-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.donut-chart-card h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.donut-chart-card canvas {
+    max-height: 200px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.donut-chart-card p {
+    margin: 10px 0 0 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Sector Bar Chart */
+.sector-chart-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.sector-chart-card h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+.sector-chart-card canvas {
+    max-height: 250px;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* Risk Analysis Section */
+.risk-analysis-section {
+    margin-top: 20px;
+}
+
+.risk-analysis-section h2 {
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+.risk-analysis-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.risk-chart-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.risk-chart-card h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+.risk-chart-container {
+    flex: 1;
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.risk-chart-container canvas {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+/* Table Card */
+.risk-table-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex: 1;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.risk-table-card h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+.table-scroll-wrapper {
+    overflow-y: auto;
+    overflow-x: auto;
+    flex: 1;
+    max-height: 400px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.table-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.data-table thead {
+    background-color: #34495e;
+    border-bottom: 2px solid #2c3e50;
+    position: sticky;
+    top: 0;
+}
+
+.data-table thead th {
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.data-table tbody td {
+    padding: 10px;
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+.data-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.gap-count-cell {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Systems Ranking Table */
+.systems-ranking-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+}
+
+.systems-ranking-card h3 {
+    margin: 0 0 20px 0;
+    color: #333;
+}
+
+.table-overflow {
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.table-overflow::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.table-overflow::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+.table-overflow::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+.table-overflow::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.ranking-table thead {
+    background-color: #ecf0f1;
+    border-bottom: 2px solid #bdc3c7;
+}
+
+.ranking-table thead th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.ranking-table tbody td {
+    padding: 10px;
+    color: #2c3e50;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.ranking-table tbody td:nth-child(3) {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ranking-table tbody tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+.ranking-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.conformity-rate-excellent {
+    background-color: #27ae60;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+}
+
+.conformity-rate-good {
+    background-color: #f39c12;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+}
+
+.conformity-rate-fair {
+    background-color: #e67e22;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+}
+
+.conformity-rate-poor {
+    background-color: #e74c3c;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+}
+/* html2pdf page break class */
+.html2pdf__page-break {
+    page-break-after: always;
+    break-after: page;
+}
+
+/* PDF Export Styles */
+@media print {
+    * {
+        box-shadow: none !important;
+    }
+    
+    .site-view-wrapper {
+        background-color: white !important;
+        padding: 0 !important;
+    }
+    
+    .top-row,
+    .category-chart-card,
+    .sector-chart-card,
+    .donut-chart-card,
+    .systems-used-card,
+    .conformity-objective-card,
+    .risk-chart-card,
+    .risk-table-card,
+    .systems-ranking-card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        margin-bottom: 20px !important;
+        padding: 15px !important;
+        background-color: white !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    .risk-analysis-row {
+        display: block !important;
+    }
+    
+    .risk-analysis-row > div {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+    
+    .risk-chart-container {
+        max-height: 250px !important;
+    }
+    
+    .table-scroll-wrapper {
+        overflow: visible !important;
+    }
+    
+    h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    canvas {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
